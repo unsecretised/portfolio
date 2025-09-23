@@ -182,24 +182,31 @@ pub fn view_index() -> List(Element(msg)) {
         ]),
         html.div([attribute.class("skills-div experience")], [
           html.h2([attribute.class("skills-title")], [
-            html.text("My Experience"),
+            html.text("My Best Projects"),
           ]),
           html.ul([attribute.class("skills-list skills-list-exp")], [
             html.li([attribute.class("skills-item skills-list-exp")], [
+              html.a([attribute.href("https://onellm.dev")], [
+                html.text("OneLLM"),
+              ]),
               html.text(
-                "2025 - 2028: Nanyang Polytechnic (NYP) Applied AI and Analytics",
+                "An AI API Aggregator that aggregates and simplifies the APIs of various LLMs",
               ),
             ]),
             html.li([attribute.class("skills-item skills-list-exp")], [
+              html.a([attribute.href("https://github.com/unsecretised/lion")], [
+                html.text("Lion"),
+              ]),
+
               html.text(
-                "2025: Took part in NYP's Startup Accelerator, called Jumpstart Programme",
+                "A CLI tool for unifying the commands for various package managers",
               ),
             ]),
             html.li([attribute.class("skills-item skills-list-exp")], [
-              html.text("2021 - 2024: Vex Robotics in Robotics CCA"),
-            ]),
-            html.li([attribute.class("skills-item")], [
-              html.text("2021 - 2024: Hai Sing Catholic School"),
+              html.a([attribute.href("https://github.com/unsecretised/docky")], [
+                html.text("Docky"),
+              ]),
+              html.text("A Customisable macos dock alternative."),
             ]),
           ]),
         ]),
@@ -316,5 +323,17 @@ const projects = [
     description: "Oreon Project is dedicated to making Enterprise Linux more suitable for desktops and laptops, providing the best user experience right out of the gate.",
     image: "https://oreonproject.org/public/images/oreonlogo.png",
     link: "https://github.com/oreonproject/",
+  ),
+  Project(
+    title: "Oxid",
+    description: "Oxid is a login / signup app that works via the CLI. It uses production grade cryptography, and code from here was used in production.",
+    image: "https://portfolio.umangsurana.com/media/Oxid-icon.png",
+    link: "https://github.com/unsecretised/oxid",
+  ),
+  Project(
+    title: "Macos App Template",
+    description: "A simple template for creating a MacOS app in Rust with Dioxus or GPUI.",
+    image: "priv/assets/image.png",
+    link: "https://github.com/unsecretised/macos-temp",
   ),
 ]
