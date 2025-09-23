@@ -14,6 +14,7 @@
 	font-family: "Nugo Sans";
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 #bg {
@@ -27,6 +28,12 @@
 	background-size: 30px 30px;
 	background-position: -5px -5px;
 	z-index: -1;
+}
+
+body {
+	display: grid;
+	justify-content: center;
+
 }
 
 #app {
@@ -197,6 +204,16 @@ nav a {
 .experience * {
 	color: var(--color-foreground);
 	display: block;
+	font-weight: normal;
+}
+
+.experience:hover {
+	transform: scale(1.05) rotate(2deg);
+	opacity: 1;
+}
+
+.experience .skills-item {
+	font-size: 14px
 }
 
 #rust {
@@ -339,4 +356,72 @@ ul {
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+	background-color: var(--color-background);
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-foreground);
+	border-radius: 20px;
+
+}
+
+@media (max-width: 720px) {
+	nav {
+		width: 95vw;
+	}
+
+	.navbar-link {
+		padding: 4px;
+		margin: 4px;
+	}
+
+	.hello {
+		width: 95vw;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.detailed-description {
+		width: 95vw;
+	}
+
+	.skills-div {
+		min-width: 80vw;
+	}
+
+	#my-strengths {
+		flex-direction: column;
+		align-items: center;
+		width: 95vw
+	}
+
+	#projects {
+		max-width: 95vw;
+	}
+
+	.project-card {
+		height: 450px;
+		margin: 10px 0;
+		padding: 1rem;
+		width: 400px;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	footer {
+		display: none;
+	}
 }
