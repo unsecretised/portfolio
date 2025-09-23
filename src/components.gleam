@@ -92,28 +92,100 @@ pub fn view_index() -> List(Element(msg)) {
         html.div([attribute.class("skills-div")], [
           html.h2([attribute.class("skills-title")], [html.text("My Skills")]),
           html.ul([attribute.class("skills-list")], [
-            html.li([attribute.class("skills-item")], [html.text("Rust")]),
-            html.li([attribute.class("skills-item")], [html.text("Golang")]),
-            html.li([attribute.class("skills-item")], [html.text("Gleam")]),
-            html.li([attribute.class("skills-item")], [html.text("JavaScript")]),
-            html.li([attribute.class("skills-item")], [html.text("NodeJS")]),
-            html.li([attribute.class("skills-item")], [html.text("Python")]),
-            html.li([attribute.class("skills-item")], [html.text("SQL")]),
-            html.li([attribute.class("skills-item")], [html.text("HTML")]),
-            html.li([attribute.class("skills-item")], [html.text("CSS")]),
-            html.li([attribute.class("skills-item")], [html.text("React")]),
+            html.li([attribute.class("skills-item"), attribute.id("rust")], [
+              html.img([
+                attribute.src(
+                  "https://rustacean.net/assets/rustacean-orig-noshadow.svg",
+                ),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("Rust"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("golang")], [
+              html.img([
+                attribute.src("https://go.dev/images/go-logo-white.svg"),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("Go"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("gleam")], [
+              html.img([
+                attribute.src("https://gleam.run/images/lucy/lucy.svg"),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("Gleam"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("python")], [
+              html.img([
+                attribute.src(
+                  "https://www.python.org/static/img/python-logo-large.c36dccadd999.png?1646853871",
+                ),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("Python"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("sql")], [
+              html.img([
+                attribute.src("assets/psql.png"),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("SQL"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("html")], [
+              html.img([
+                attribute.src(
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
+                ),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("HTML"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("css")], [
+              html.img([
+                attribute.src(
+                  "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+                ),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("CSS"),
+            ]),
+            html.li(
+              [attribute.class("skills-item"), attribute.id("javascript")],
+              [
+                html.img([
+                  attribute.src(
+                    "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+                  ),
+                  attribute.class("skills-icon"),
+                ]),
+                html.text("JavaScript"),
+              ],
+            ),
+            html.li([attribute.class("skills-item"), attribute.id("nodejs")], [
+              html.img([
+                attribute.src("https://nodejs.org/static/logos/jsIconWhite.svg"),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("NodeJS"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("deno")], [
+              html.img([
+                attribute.src("assets/deno.png"),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("Deno"),
+            ]),
           ]),
         ]),
-        html.div([attribute.class("skills-div")], [
+        html.div([attribute.class("skills-div experience")], [
           html.h2([attribute.class("skills-title")], [
             html.text("My Experience"),
           ]),
           html.ul([attribute.class("skills-list skills-list-exp")], [
-            html.li([attribute.class("skills-item")], [
-              html.text("2021 - 2024: Hai Sing Catholic School"),
-            ]),
             html.li([attribute.class("skills-item skills-list-exp")], [
-              html.text("2021 - 2024: Vex Robotics in Robotics CCA"),
+              html.text(
+                "2025 - 2028: Nanyang Polytechnic (NYP) Applied AI and Analytics",
+              ),
             ]),
             html.li([attribute.class("skills-item skills-list-exp")], [
               html.text(
@@ -121,9 +193,10 @@ pub fn view_index() -> List(Element(msg)) {
               ),
             ]),
             html.li([attribute.class("skills-item skills-list-exp")], [
-              html.text(
-                "2025 - 2028: Nanyang Polytechnic (NYP) Applied AI and Analytics",
-              ),
+              html.text("2021 - 2024: Vex Robotics in Robotics CCA"),
+            ]),
+            html.li([attribute.class("skills-item")], [
+              html.text("2021 - 2024: Hai Sing Catholic School"),
             ]),
           ]),
         ]),

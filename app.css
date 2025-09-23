@@ -151,9 +151,29 @@ nav a {
 .detailed-description div {
 	width: 80%;
 	padding: 1rem;
+}
+
+.skills-title {
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+
+.skills-item {
+	padding: 4px 10px;
+	border-radius: 6px;
+	display: inline-flex;
+	margin: 4px;
+	align-items: center;
+	gap: 4px;
+	color: var(--color-background);
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+
+#my-strengths {
+	gap: 20px;
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content: center;
 }
 
 .skills-div {
@@ -162,25 +182,62 @@ nav a {
 	border-style: solid;
 	border-color: var(--color-foreground);
 	border-radius: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-	margin: 20px;
-	gap: 5px;
 	transition: all 0.25s ease-in;
 }
 
+.skills-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .skills-div:hover {
-	transform: scale(1.05);
-	opacity: 0.8;
+	transform: scale(1.05) rotate(-2deg);
 }
 
-.skills-item {
-	margin: 0.2em;
+.experience * {
+	color: var(--color-foreground);
+	display: block;
 }
 
-.skills-list-exp {
-	margin: 0.4em;
+#rust {
+	background-color: #dea584;
+}
+
+#golang {
+	background-color: #00ADD8;
+}
+
+#gleam {
+	background-color: #ffaff3;
+}
+
+#javascript {
+	background-color: #f7df1e;
+}
+
+#python {
+	background-color: #3776ab;
+}
+
+#sql {
+	background-color: #336791;
+}
+
+#html {
+	background-color: #e34f26;
+}
+
+#css {
+	background-color: #264de4;
+}
+
+#nodejs {
+	background-color: #539e43;
+}
+
+#deno {
+	background-color: #000000;
+	color: var(--color-foreground)
 }
 
 /* -- PROJECTS -- */
@@ -193,12 +250,18 @@ nav a {
 	flex-wrap: wrap;
 }
 
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
 .project-card {
 	width: 300px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	background-color: var(--color-background);
 	border-width: 1px;
 	border-style: solid;
@@ -261,6 +324,11 @@ nav a {
 	align-items: center;
 	margin: 10px;
 	gap: 10px;
+}
+
+.skills-icon {
+	width: 40px;
+	height: 40px;
 }
 
 /* -- NOT FOUND -- */
