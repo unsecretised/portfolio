@@ -7,7 +7,7 @@ pub fn nav() {
   html.div([], [
     html.nav([attribute.id("navbar")], [
       html.a([attribute.href("/")], [
-        html.img([attribute.src("/assets/pfp.jpg"), attribute.class("pfp")]),
+        html.img([attribute.src("/priv/assets/pfp.jpg"), attribute.class("pfp")]),
       ]),
       html.div([attribute.class("navbar-links")], [
         link("/", "Home"),
@@ -43,7 +43,10 @@ fn link(href: String, text: String) -> Element(msg) {
 pub fn view_index() -> List(Element(msg)) {
   [
     html.div([attribute.class("hello")], [
-      html.img([attribute.src("/assets/pfp.jpg"), attribute.class("me-image")]),
+      html.img([
+        attribute.src("/priv/assets/pfp.jpg"),
+        attribute.class("me-image"),
+      ]),
       html.div([attribute.class("micro-description")], [
         html.h1([attribute.class("home-title")], [
           html.text("Umang Surana"),
@@ -73,7 +76,7 @@ pub fn view_index() -> List(Element(msg)) {
             ],
             [
               html.img([
-                attribute.src("assets/gmail.png"),
+                attribute.src("/priv/assets/gmail.png"),
                 attribute.class("pfp"),
                 attribute.id("email-icon"),
               ]),
@@ -126,7 +129,7 @@ pub fn view_index() -> List(Element(msg)) {
             ]),
             html.li([attribute.class("skills-item"), attribute.id("sql")], [
               html.img([
-                attribute.src("assets/psql.png"),
+                attribute.src("/priv/assets/psql.png"),
                 attribute.class("skills-icon"),
               ]),
               html.text("SQL"),
@@ -170,7 +173,7 @@ pub fn view_index() -> List(Element(msg)) {
             ]),
             html.li([attribute.class("skills-item"), attribute.id("deno")], [
               html.img([
-                attribute.src("assets/deno.png"),
+                attribute.src("/priv/assets/deno.png"),
                 attribute.class("skills-icon"),
               ]),
               html.text("Deno"),
@@ -219,7 +222,7 @@ pub fn view_contact() -> List(Element(msg)) {
         contact_card(
           "mailto:no1umang@gmail.com",
           "no1umang@gmail.com",
-          "assets/gmail.png",
+          "priv/assets/gmail.png",
         ),
         contact_card(
           "https://github.com/unsecretised/",
@@ -293,19 +296,19 @@ const projects = [
   Project(
     title: "OneLLM",
     description: "OneLLM was a AI API Aggregator that aggregates and simplifies the APIs of various LLMs.",
-    image: "assets/OneLLM-Horizontal-2.png",
+    image: "/priv/assets/OneLLM-Horizontal-2.png",
     link: "https://github.com/OneLLM-Dev/OneLLM",
   ),
   Project(
     title: "Lion",
     description: "Lion is a CLI tool for unifying the commands for various package managers",
-    image: "assets/Lion-cli-icon.png",
+    image: "priv/assets/Lion-cli-icon.png",
     link: "https://github.com/unsecretised/lion",
   ),
   Project(
     title: "Docky",
     description: "A Customisable macos dock alternative.",
-    image: "assets/docky.png",
+    image: "priv/assets/docky.png",
     link: "https://github.com/unsecretised/docky",
   ),
   Project(

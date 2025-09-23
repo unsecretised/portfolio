@@ -3684,7 +3684,7 @@ function nav2() {
             toList([
               img(
                 toList([
-                  src("/assets/pfp.jpg"),
+                  src("/priv/assets/pfp.jpg"),
                   class$("pfp")
                 ])
               )
@@ -3726,7 +3726,7 @@ function view_index() {
       toList([
         img(
           toList([
-            src("/assets/pfp.jpg"),
+            src("/priv/assets/pfp.jpg"),
             class$("me-image")
           ])
         ),
@@ -3768,7 +3768,7 @@ function view_index() {
                   toList([
                     img(
                       toList([
-                        src("assets/gmail.png"),
+                        src("/priv/assets/gmail.png"),
                         class$("pfp"),
                         id("email-icon")
                       ])
@@ -3881,7 +3881,7 @@ function view_index() {
                       toList([
                         img(
                           toList([
-                            src("assets/psql.png"),
+                            src("/priv/assets/psql.png"),
                             class$("skills-icon")
                           ])
                         ),
@@ -3964,7 +3964,7 @@ function view_index() {
                       toList([
                         img(
                           toList([
-                            src("assets/deno.png"),
+                            src("/priv/assets/deno.png"),
                             class$("skills-icon")
                           ])
                         ),
@@ -4048,7 +4048,7 @@ function view_contact() {
             contact_card(
               "mailto:no1umang@gmail.com",
               "no1umang@gmail.com",
-              "assets/gmail.png"
+              "priv/assets/gmail.png"
             ),
             contact_card(
               "https://github.com/unsecretised/",
@@ -4116,19 +4116,19 @@ var projects = /* @__PURE__ */ toList([
   /* @__PURE__ */ new Project(
     "OneLLM",
     "OneLLM was a AI API Aggregator that aggregates and simplifies the APIs of various LLMs.",
-    "assets/OneLLM-Horizontal-2.png",
+    "/priv/assets/OneLLM-Horizontal-2.png",
     "https://github.com/OneLLM-Dev/OneLLM"
   ),
   /* @__PURE__ */ new Project(
     "Lion",
     "Lion is a CLI tool for unifying the commands for various package managers",
-    "assets/Lion-cli-icon.png",
+    "priv/assets/Lion-cli-icon.png",
     "https://github.com/unsecretised/lion"
   ),
   /* @__PURE__ */ new Project(
     "Docky",
     "A Customisable macos dock alternative.",
-    "assets/docky.png",
+    "priv/assets/docky.png",
     "https://github.com/unsecretised/docky"
   ),
   /* @__PURE__ */ new Project(
