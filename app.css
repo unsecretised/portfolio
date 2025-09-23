@@ -4,9 +4,14 @@
 	--color-transparent-bg: #0f0f0f4d;
 }
 
+@font-face {
+	font-family: "Nugo Sans";
+	src: url("/assets/nugo-sans-font/NugoSansLight-9YzoK.ttf");
+}
+
 * {
 	color: var(--color-foreground);
-	font-family: 'Nugo Sans';
+	font-family: "Nugo Sans";
 	margin: 0;
 	padding: 0;
 }
@@ -17,7 +22,8 @@
 	height: 100%;
 	/* Add your background pattern here */
 	background-color: var(--color-background);
-	background-image: radial-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 0);
+	background-image: radial-gradient(rgba(255, 255, 255, 0.05) 2px,
+			transparent 0);
 	background-size: 30px 30px;
 	background-position: -5px -5px;
 	z-index: -1;
@@ -45,7 +51,8 @@ nav {
 	background-color: var(--color-background);
 	color: var(--color-foreground);
 	margin: 20px;
-	box-shadow: rgba(100, 180, 255, 0.4) 5px 5px,
+	box-shadow:
+		rgba(100, 180, 255, 0.4) 5px 5px,
 		rgba(100, 180, 255, 0.2) 10px 10px,
 		rgba(100, 180, 255, 0.05) 15px 15px;
 }
@@ -60,6 +67,17 @@ nav {
 	width: 30px;
 	object-fit: cover;
 	border-radius: 50%;
+}
+
+.me-image {
+	width: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin: 0;
+}
+
+#email-icon {
+	background-color: var(--color-foreground);
 }
 
 nav a {
@@ -87,6 +105,82 @@ nav a {
 	width: 100%;
 }
 
+/* -- HOME -- */
+.hello {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	justify-content: center;
+	border-radius: 20px;
+}
+
+.micro-description,
+.me-image {
+	padding: 1rem;
+}
+
+.micro-description {
+	margin: 10;
+}
+
+.home-title,
+.home-description {
+	margin: 10px;
+}
+
+.socials * {
+	margin: 0 5px;
+}
+
+.detailed-description {
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.detailed-description p {
+	width: 80%;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+.detailed-description div {
+	width: 80%;
+	padding: 1rem;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.skills-div {
+	background-color: var(--color-background);
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-foreground);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	margin: 20px;
+	gap: 5px;
+	transition: all 0.25s ease-in;
+}
+
+.skills-div:hover {
+	transform: scale(1.05);
+	opacity: 0.8;
+}
+
+.skills-item {
+	margin: 0.2em;
+}
+
+.skills-list-exp {
+	margin: 0.4em;
+}
+
 /* -- PROJECTS -- */
 #projects {
 	display: flex;
@@ -111,12 +205,18 @@ nav a {
 	transition: all 0.1s ease-in;
 	margin: 10px;
 	padding: 1rem;
-	height: 200px;
+	height: 400px;
 }
 
 .project-image {
 	object-fit: cover;
 	border-radius: 20px;
+	width: 100%;
+	background-color: var(--color-foreground);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
 }
 
 .project-card * {
