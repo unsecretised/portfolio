@@ -3,6 +3,7 @@
 import components
 import gleam/uri.{type Uri}
 import lustre
+import lustre/attribute
 import lustre/effect.{type Effect}
 import lustre/element.{type Element}
 import lustre/element/html
@@ -117,5 +118,17 @@ fn view(model: Model) -> Element(Msg) {
         NotFound(_) -> components.view_not_found()
       }
     }),
+    html.footer([], [
+      html.div([attribute.class("footer-links")], [
+        html.a(
+          [
+            attribute.class("navbar-link"),
+            attribute.href("https://github.com/unsecretised/portfolio"),
+          ],
+          [html.text("Source code")],
+        ),
+        html.text("Built with Gleam x Lustre - © 2025 Umang Surana"),
+      ]),
+    ]),
   ])
 }
