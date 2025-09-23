@@ -139,7 +139,42 @@ pub fn view_projects() -> List(Element(msg)) {
 }
 
 pub fn view_contact() -> List(Element(msg)) {
-  []
+  [
+    html.div([attribute.class("contact-page")], [
+      html.h2([], [html.text("Contact me at:")]),
+      html.div([attribute.class("contact-cards")], [
+        contact_card(
+          "mailto:no1umang@gmail.com",
+          "no1umang@gmail.com",
+          "assets/gmail.png",
+        ),
+        contact_card(
+          "https://github.com/unsecretised/",
+          "@unsecretised",
+          "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+        ),
+        contact_card(
+          "https://discord.com/",
+          "@secretised",
+          "https://img.icons8.com/?size=96&id=M725CLW4L7wE&format=png",
+        ),
+      ]),
+    ]),
+  ]
+}
+
+pub fn contact_card(href: String, text: String, icon: String) -> Element(msg) {
+  html.a(
+    [
+      attribute.href(href),
+      attribute.target("_blank"),
+      attribute.class("contact-link"),
+    ],
+    [
+      html.img([attribute.src(icon), attribute.class("pfp")]),
+      html.text(text),
+    ],
+  )
 }
 
 pub fn view_not_found() -> List(Element(msg)) {

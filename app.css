@@ -65,8 +65,10 @@ nav {
 
 .pfp {
 	width: 30px;
+	height: 30px;
 	object-fit: cover;
 	border-radius: 50%;
+	background-color: var(--color-foreground);
 }
 
 .me-image {
@@ -226,6 +228,39 @@ nav a {
 .project-card:hover {
 	transform: scale(1.05);
 	opacity: 0.8;
+}
+
+/* -- CONTACT -- */
+
+.contact-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	background-color: var(--color-background);
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-foreground);
+	border-radius: 20px;
+	margin: 40px;
+}
+
+.contact-cards {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+}
+
+.contact-page h2 {
+	margin-top: 20px;
+	padding-left: 1rem;
+}
+
+.contact-link {
+	display: flex;
+	align-items: center;
+	margin: 10px;
+	gap: 10px;
 }
 
 /* -- NOT FOUND -- */
