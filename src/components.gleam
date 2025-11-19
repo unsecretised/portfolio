@@ -307,6 +307,12 @@ const projects = [
     link: "https://github.com/OneLLM-Dev/OneLLM",
   ),
   Project(
+    title: "Secretised YouTube Channel",
+    description: "https://www.youtube.com/@secretised",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1004px-Logo_of_YouTube_%282015-2017%29.svg.png?20200109235614",
+    link: "https://youtube.com/@secretised",
+  ),
+  Project(
     title: "Lion",
     description: "Lion is a CLI tool for unifying the commands for various package managers",
     image: "priv/assets/Lion-cli-icon.png",
@@ -317,12 +323,6 @@ const projects = [
     description: "A Customisable macos dock alternative.",
     image: "priv/assets/docky.png",
     link: "https://github.com/unsecretised/docky",
-  ),
-  Project(
-    title: "Oreon Project",
-    description: "Oreon Project is dedicated to making Enterprise Linux more suitable for desktops and laptops, providing the best user experience right out of the gate.",
-    image: "https://oreonproject.org/public/images/oreonlogo.png",
-    link: "https://github.com/oreonproject/",
   ),
   Project(
     title: "Oxid",
