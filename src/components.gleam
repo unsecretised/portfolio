@@ -227,8 +227,8 @@ pub fn view_contact() -> List(Element(msg)) {
       html.h2([], [html.text("Contact me at:")]),
       html.div([attribute.class("contact-cards")], [
         contact_card(
-          "mailto:no1umang@gmail.com",
-          "no1umang@gmail.com",
+          "mailto:umang@umangsurana.com",
+          "umang@umangsurana.com",
           "priv/assets/gmail.png",
         ),
         contact_card(
@@ -302,37 +302,37 @@ fn project_card(project: Project) -> Element(msg) {
 const projects = [
   Project(
     title: "OneLLM",
-    description: "OneLLM was a AI API Aggregator that aggregates and simplifies the APIs of various LLMs.",
+    description: "CEO and Founder of OneLLM, which was an AI API Aggregator that aggregates and simplifies the APIs of various LLMs.",
     image: "/priv/assets/OneLLM-Horizontal-2.png",
     link: "https://github.com/OneLLM-Dev/OneLLM",
   ),
   Project(
     title: "Secretised YouTube Channel",
-    description: "https://www.youtube.com/@secretised",
+    description: "Research edit, and post videos on Cybersecurity, and Rust",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1004px-Logo_of_YouTube_%282015-2017%29.svg.png?20200109235614",
     link: "https://youtube.com/@secretised",
   ),
   Project(
     title: "Lion",
-    description: "Lion is a CLI tool for unifying the commands for various package managers",
+    description: "Built Lion, a CLI tool for unifying the commands for various package managers",
     image: "priv/assets/Lion-cli-icon.png",
     link: "https://github.com/unsecretised/lion",
   ),
   Project(
     title: "Docky",
-    description: "A Customisable macos dock alternative.",
+    description: "Developed from scratch a customisable macos dock alternative.",
     image: "priv/assets/docky.png",
     link: "https://github.com/unsecretised/docky",
   ),
   Project(
     title: "Oxid",
-    description: "Oxid is a login / signup app that works via the CLI. It uses production grade cryptography, and code from here was used in production.",
+    description: "Authored Oxid, a login / signup app that works via the CLI. It uses production grade cryptography, and code from here was used in production.",
     image: "https://portfolio.umangsurana.com/media/Oxid-icon.png",
     link: "https://github.com/unsecretised/oxid",
   ),
   Project(
     title: "Macos App Template",
-    description: "A simple template for creating a MacOS app in Rust with Dioxus or GPUI.",
+    description: "Designed a simple template for creating a MacOS app in Rust with Dioxus or GPUI.",
     image: "priv/assets/image.png",
     link: "https://github.com/unsecretised/macos-temp",
   ),
