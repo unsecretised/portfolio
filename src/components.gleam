@@ -3,6 +3,9 @@ import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
 
+const intro = "Hi! I'm Umang Surana, a software developer specialising in desktop apps and web apps! 
+I'm currently studying Applied AI and Analytics at Nanyang Polytechnic, Singapore."
+
 pub fn nav() {
   html.div([], [
     html.nav([attribute.id("navbar")], [
@@ -52,6 +55,8 @@ pub fn view_index() -> List(Element(msg)) {
           html.text("Umang Surana"),
         ]),
         html.p([attribute.class("home-description")], [
+          html.text("Backend and Desktop app"),
+          html.br([]),
           html.text("Software developer"),
         ]),
         html.div([attribute.class("socials")], [
@@ -87,9 +92,7 @@ pub fn view_index() -> List(Element(msg)) {
     ]),
     html.div([attribute.class("detailed-description")], [
       html.p([], [
-        html.text(
-          "Hi! I'm Umang Surana, a software developer from Singapore. I'm currently studying Applied AI and Analytics at Nanyang Polytechnic, Singapore.",
-        ),
+        html.text(intro),
       ]),
       html.div([attribute.id("my-strengths")], [
         html.div([attribute.class("skills-div")], [
@@ -103,13 +106,6 @@ pub fn view_index() -> List(Element(msg)) {
                 attribute.class("skills-icon"),
               ]),
               html.text("Rust"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("golang")], [
-              html.img([
-                attribute.src("https://go.dev/images/go-logo-white.svg"),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("Go"),
             ]),
             html.li([attribute.class("skills-item"), attribute.id("gleam")], [
               html.img([
@@ -152,6 +148,27 @@ pub fn view_index() -> List(Element(msg)) {
               ]),
               html.text("CSS"),
             ]),
+            html.li([attribute.class("skills-item"), attribute.id("deno")], [
+              html.img([
+                attribute.src("/priv/assets/deno.png"),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("Deno"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("nodejs")], [
+              html.img([
+                attribute.src("https://nodejs.org/static/logos/jsIconWhite.svg"),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("NodeJS"),
+            ]),
+            html.li([attribute.class("skills-item"), attribute.id("golang")], [
+              html.img([
+                attribute.src("https://go.dev/images/go-logo-white.svg"),
+                attribute.class("skills-icon"),
+              ]),
+              html.text("Go"),
+            ]),
             html.li(
               [attribute.class("skills-item"), attribute.id("javascript")],
               [
@@ -164,20 +181,6 @@ pub fn view_index() -> List(Element(msg)) {
                 html.text("JavaScript"),
               ],
             ),
-            html.li([attribute.class("skills-item"), attribute.id("nodejs")], [
-              html.img([
-                attribute.src("https://nodejs.org/static/logos/jsIconWhite.svg"),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("NodeJS"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("deno")], [
-              html.img([
-                attribute.src("/priv/assets/deno.png"),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("Deno"),
-            ]),
           ]),
         ]),
         html.div([attribute.class("skills-div experience")], [
@@ -301,6 +304,12 @@ fn project_card(project: Project) -> Element(msg) {
 
 const projects = [
   Project(
+    title: "RustCast",
+    description: "Built from scratch an open source, blazing fast app, reaching 12 stars, 84 downloads, and bringing in $27 from sponsors",
+    image: "https://rustcast.umangsurana.com/rustcast-demo-v0-2-0.png",
+    link: "https://rustcast.umangsurana.com",
+  ),
+  Project(
     title: "OneLLM",
     description: "CEO and Founder of OneLLM, which was an AI API Aggregator that aggregates and simplifies the APIs of various LLMs.",
     image: "/priv/assets/OneLLM-Horizontal-2.png",
@@ -329,11 +338,5 @@ const projects = [
     description: "Authored Oxid, a login / signup app that works via the CLI. It uses production grade cryptography, and code from here was used in production.",
     image: "https://portfolio.umangsurana.com/media/Oxid-icon.png",
     link: "https://github.com/unsecretised/oxid",
-  ),
-  Project(
-    title: "Macos App Template",
-    description: "Designed a simple template for creating a MacOS app in Rust with Dioxus or GPUI.",
-    image: "priv/assets/image.png",
-    link: "https://github.com/unsecretised/macos-temp",
   ),
 ]
