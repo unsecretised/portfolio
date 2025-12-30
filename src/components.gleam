@@ -189,7 +189,7 @@ pub fn view_index() -> List(Element(msg)) {
           ]),
           html.ul([attribute.class("skills-list skills-list-exp")], [
             html.li([attribute.class("skills-item skills-list-exp")], [
-              html.a([attribute.href("https://onellm.dev")], [
+              html.a([attribute.href("https://github.com/OneLLM-Dev/OneLLM")], [
                 html.text("OneLLM"),
               ]),
               html.text(
