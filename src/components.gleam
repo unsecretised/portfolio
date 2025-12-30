@@ -189,27 +189,49 @@ pub fn view_index() -> List(Element(msg)) {
           ]),
           html.ul([attribute.class("skills-list skills-list-exp")], [
             html.li([attribute.class("skills-item skills-list-exp")], [
-              html.a([attribute.href("https://github.com/OneLLM-Dev/OneLLM")], [
-                html.text("OneLLM"),
-              ]),
+              html.a(
+                [
+                  attribute.href("https://github.com/OneLLM-Dev/OneLLM"),
+                  attribute.target("_blank"),
+                ],
+                [
+                  html.text("OneLLM"),
+                ],
+              ),
               html.text(
                 "An AI API Aggregator that aggregates and simplifies the APIs of various LLMs",
               ),
             ]),
+
             html.li([attribute.class("skills-item skills-list-exp")], [
-              html.a([attribute.href("https://github.com/unsecretised/lion")], [
-                html.text("Lion"),
-              ]),
+              html.a(
+                [
+                  attribute.href("https://rustcast.umangsurana.com"),
+                  attribute.target("_blank"),
+                ],
+                [
+                  html.text("RustCast"),
+                ],
+              ),
+
+              html.text(
+                "A Open Source alternative to a paid and closed source MacOS Productivity App called Raycast",
+              ),
+            ]),
+            html.li([attribute.class("skills-item skills-list-exp")], [
+              html.a(
+                [
+                  attribute.href("https://github.com/unsecretised/lion"),
+                  attribute.target("_blank"),
+                ],
+                [
+                  html.text("Lion"),
+                ],
+              ),
 
               html.text(
                 "A CLI tool for unifying the commands for various package managers",
               ),
-            ]),
-            html.li([attribute.class("skills-item skills-list-exp")], [
-              html.a([attribute.href("https://github.com/unsecretised/docky")], [
-                html.text("Docky"),
-              ]),
-              html.text("A Customisable macos dock alternative."),
             ]),
           ]),
         ]),
@@ -238,11 +260,6 @@ pub fn view_contact() -> List(Element(msg)) {
           "https://github.com/unsecretised/",
           "@unsecretised",
           "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
-        ),
-        contact_card(
-          "https://discord.com/",
-          "@secretised",
-          "https://img.icons8.com/?size=96&id=M725CLW4L7wE&format=png",
         ),
       ]),
     ]),
