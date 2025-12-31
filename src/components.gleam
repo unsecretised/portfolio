@@ -76,7 +76,7 @@ pub fn view_index() -> List(Element(msg)) {
           ),
           html.a(
             [
-              attribute.href("mailto:no1umang@gmail.com"),
+              attribute.href("mailto:umang@umangsurana.com"),
               attribute.target("_blank"),
             ],
             [
