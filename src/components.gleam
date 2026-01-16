@@ -3,7 +3,7 @@ import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
 
-const intro = "Hi! I'm Umang Surana, a software developer specialising in desktop apps and web apps! 
+const intro = "Hi! I'm Umang Surana, a software developer specialising in desktop apps and web apps!
 I'm currently studying Applied AI and Analytics at Nanyang Polytechnic, Singapore."
 
 pub fn nav() {
@@ -215,7 +215,7 @@ pub fn view_index() -> List(Element(msg)) {
               ),
 
               html.text(
-                "A Open Source alternative to a paid and closed source MacOS Productivity App called Raycast",
+                "A Open Source alternative to a paid and closed source MacOS Productivity App",
               ),
             ]),
             html.li([attribute.class("skills-item skills-list-exp")], [
@@ -322,7 +322,7 @@ fn project_card(project: Project) -> Element(msg) {
 const projects = [
   Project(
     title: "RustCast",
-    description: "Built from scratch an open source, blazing fast app, reaching 12 stars, 84 downloads, and bringing in $27 from sponsors",
+    description: "Built from scratch an open source, blazing fast app, reaching 72 stars, 240 downloads, and bringing in a few sponsors",
     image: "https://rustcast.umangsurana.com/rustcast-demo-v0-2-0.png",
     link: "https://rustcast.umangsurana.com",
   ),
