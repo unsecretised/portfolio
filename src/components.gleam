@@ -323,7 +323,7 @@ const projects = [
   Project(
     title: "RustCast",
     description: "Built from scratch an open source, blazing fast app, reaching 72 stars, 240 downloads, and bringing in a few sponsors",
-    image: "https://rustcast.umangsurana.com/rustcast-demo-v0-2-0.png",
+    image: "priv/assets/rustcast-poster.png",
     link: "https://rustcast.umangsurana.com",
   ),
   Project(
