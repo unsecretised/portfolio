@@ -55,9 +55,9 @@ pub fn view_index() -> List(Element(msg)) {
           html.text("Umang Surana"),
         ]),
         html.p([attribute.class("home-description")], [
-          html.text("Backend and Desktop app"),
+          html.text("Backend and desktop, apps"),
           html.br([]),
-          html.text("Software developer"),
+          html.text("software developer"),
         ]),
         html.div([attribute.class("socials")], [
           html.a(
@@ -191,7 +191,7 @@ pub fn view_index() -> List(Element(msg)) {
             html.li([attribute.class("skills-item skills-list-exp")], [
               html.a(
                 [
-                  attribute.href("https://github.com/OneLLM-Dev/OneLLM"),
+                  attribute.href("https://onellm.dev"),
                   attribute.target("_blank"),
                 ],
                 [
@@ -330,11 +330,11 @@ const projects = [
     title: "OneLLM",
     description: "CEO and Founder of OneLLM, which was an AI API Aggregator that aggregates and simplifies the APIs of various LLMs.",
     image: "/priv/assets/OneLLM-Horizontal-2.png",
-    link: "https://github.com/OneLLM-Dev/OneLLM",
+    link: "https://onellm.dev",
   ),
   Project(
     title: "Secretised YouTube Channel",
-    description: "Research edit, and post videos on Cybersecurity, and Rust",
+    description: "Researched, edited, and posted videos on Cybersecurity and Rust",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1004px-Logo_of_YouTube_%282015-2017%29.svg.png?20200109235614",
     link: "https://youtube.com/@secretised",
   ),
