@@ -76,7 +76,7 @@ pub fn view_index() -> List(Element(msg)) {
           ),
           html.a(
             [
-              attribute.href("mailto:umang@umangsurana.com"),
+              attribute.href("mailto:umang+portfolio@umangsurana.com"),
               attribute.target("_blank"),
             ],
             [
@@ -252,7 +252,7 @@ pub fn view_contact() -> List(Element(msg)) {
       html.h2([], [html.text("Contact me at:")]),
       html.div([attribute.class("contact-cards")], [
         contact_card(
-          "mailto:umang@umangsurana.com",
+          "mailto:umang+portfolio@umangsurana.com",
           "umang@umangsurana.com",
           "priv/assets/gmail.png",
         ),
