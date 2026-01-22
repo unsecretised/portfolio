@@ -350,12 +350,12 @@ const projects = [
     title: "Docky",
     description: "Developed from scratch a customisable macos dock alternative.",
     image: "priv/assets/docky.png",
-    link: "https://github.com/unsecretised/docky",
+    link: "https://github.com/unsecretised/docky?tab=readme-ov-file#Docky",
   ),
   Project(
     title: "Oxid",
     description: "Authored Oxid, a login / signup app that works via the CLI. It uses production grade cryptography, and code from here was used in production.",
     image: "https://portfolio.umangsurana.com/media/Oxid-icon.png",
-    link: "https://github.com/unsecretised/oxid",
+    link: "https://github.com/unsecretised/oxid?tab=readme-ov-file#oxid-is-an-account-manager-made-in-rust-",
   ),
 ]
