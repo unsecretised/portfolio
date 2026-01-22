@@ -221,7 +221,9 @@ pub fn view_index() -> List(Element(msg)) {
             html.li([attribute.class("skills-item skills-list-exp")], [
               html.a(
                 [
-                  attribute.href("https://github.com/unsecretised/lion"),
+                  attribute.href(
+                    "https://github.com/unsecretised/lion?tab=readme-ov-file#lion",
+                  ),
                   attribute.target("_blank"),
                 ],
                 [
@@ -342,7 +344,7 @@ const projects = [
     title: "Lion",
     description: "Built Lion, a CLI tool for unifying the commands for various package managers",
     image: "priv/assets/Lion-cli-icon.png",
-    link: "https://github.com/unsecretised/lion",
+    link: "https://github.com/unsecretised/lion?tab=readme-ov-file#lion",
   ),
   Project(
     title: "Docky",
