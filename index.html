@@ -11,6 +11,16 @@
     <!-- <link rel="stylesheet" href="/priv/static/gfolio.css"> -->
     <script type="module" src="/priv/static/gfolio.mjs"></script>
     <script type="module" src="/priv/static/gfolio.min.mjs"></script>
+    <script>
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const path = params.get('path');
+    if (path) {
+      window.history.replaceState(null, null, path);
+    }
+  })();
+</script>
+
   </head>
 
   <body>
