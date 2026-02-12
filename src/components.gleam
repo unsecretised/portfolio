@@ -324,7 +324,7 @@ fn project_card(project: Project) -> Element(msg) {
 const projects = [
   Project(
     title: "RustCast",
-    description: "Built from scratch an open source, blazing fast app, reaching 72 stars, 240 downloads, and bringing in a few sponsors",
+    description: "Built from scratch an open source, blazing fast app, reaching 336 stars, 600+ downloads, and bringing in a few sponsors",
     image: "priv/assets/rustcast-poster.png",
     link: "https://rustcast.umangsurana.com",
   ),
