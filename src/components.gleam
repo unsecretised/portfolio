@@ -55,7 +55,7 @@ pub fn view_index() -> List(Element(msg)) {
           html.text("Umang Surana"),
         ]),
         html.p([attribute.class("home-description")], [
-          html.text("Backend and desktop, apps"),
+          html.text("Backend and desktop"),
           html.br([]),
           html.text("software developer"),
         ]),
