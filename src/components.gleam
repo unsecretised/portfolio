@@ -206,7 +206,7 @@ pub fn view_index() -> List(Element(msg)) {
             html.li([attribute.class("skills-item skills-list-exp")], [
               html.a(
                 [
-                  attribute.href("https://rustcast.umangsurana.com"),
+                  attribute.href("https://rustcast.app"),
                   attribute.target("_blank"),
                 ],
                 [
