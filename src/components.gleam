@@ -3,7 +3,7 @@ import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
 
-const intro = "Hi! I'm Umang Surana, a software developer specialising in desktop apps and web apps!
+const intro = "Hi! I'm Umang Surana, a software developer specialising in desktop web apps!
 I'm currently studying Applied AI and Analytics at Nanyang Polytechnic, Singapore."
 
 pub fn nav() {
@@ -324,9 +324,9 @@ fn project_card(project: Project) -> Element(msg) {
 const projects = [
   Project(
     title: "RustCast",
-    description: "Built from scratch an open source, blazing fast app, reaching 336 stars, 600+ downloads, and bringing in a few sponsors",
+    description: "Built from scratch an open source, blazing fast app, reaching 400+ stars, 1.1k+ downloads, and bringing in multiple sponsors",
     image: "priv/assets/rustcast-poster.png",
-    link: "https://rustcast.umangsurana.com",
+    link: "https://rustcast.app",
   ),
   Project(
     title: "OneLLM",
@@ -337,7 +337,7 @@ const projects = [
   Project(
     title: "Secretised YouTube Channel",
     description: "Researched, edited, and posted videos on Cybersecurity and Rust",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1004px-Logo_of_YouTube_%282015-2017%29.svg.png?20200109235614",
+    image: "priv/assets/ytlogo.png",
     link: "https://youtube.com/@secretised",
   ),
   Project(
