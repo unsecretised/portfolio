@@ -17,6 +17,13 @@
   box-sizing: border-box;
 }
 
+#navbar {
+  display: flex;  
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 #bg {
   position: fixed;
   width: 100%;
@@ -62,9 +69,9 @@ nav {
   color: var(--color-foreground);
   margin: 20px;
   box-shadow:
-    rgba(100, 180, 255, 0.4) 5px 5px,
-    rgba(100, 180, 255, 0.2) 10px 10px,
-    rgba(100, 180, 255, 0.05) 15px 15px;
+    rgba(10, 10, 10, 0.4) 5px 5px,
+    rgba(10, 10, 10, 0.2) 10px 10px,
+    rgba(10, 10, 10, 0.1) 15px 15px;
 }
 
 #logo {
@@ -99,7 +106,7 @@ nav a {
 
 .navbar-link {
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .navbar-link::after {
@@ -326,7 +333,6 @@ ul {
   border-style: solid;
   border-color: var(--color-foreground);
   border-radius: 20px;
-  margin: 40px;
 }
 
 .contact-cards {
