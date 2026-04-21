@@ -115,7 +115,10 @@ pub fn view_index() -> List(Element(msg)) {
             "mailto:umang+pf@umangsurana.com",
             "/priv/assets/gmail.png",
           ),
-          social_icon("https://users.rust-lang.org/u/unsecretised/", "https://github.com/rust-lang/rust-artwork/blob/master/logo/rusty/rust-logo-512x512.png?raw=true"),
+          social_icon(
+            "https://users.rust-lang.org/u/unsecretised/",
+            "https://github.com/rust-lang/rust-artwork/blob/master/logo/rusty/rust-logo-512x512.png?raw=true",
+          ),
         ]),
       ]),
     ]),
@@ -130,11 +133,7 @@ pub fn view_index() -> List(Element(msg)) {
               "Rust",
               "rust",
             ),
-            icon_skills_item(
-              "/priv/assets/docker.svg",
-              "Docker",
-              "sql",
-            ),
+            icon_skills_item("/priv/assets/docker.svg", "Docker", "sql"),
             icon_skills_item(
               "https://www.svgrepo.com/show/303206/javascript-logo.svg",
               "",
@@ -150,11 +149,7 @@ pub fn view_index() -> List(Element(msg)) {
               "",
               "golang",
             ),
-            icon_skills_item(
-              "/priv/assets/aws.svg",
-              "",
-              "rust",
-            ),
+            icon_skills_item("/priv/assets/aws.svg", "", "rust"),
             icon_skills_item(
               "https://ui.shadcn.com/favicon.ico",
               "ShadCN",
@@ -165,11 +160,7 @@ pub fn view_index() -> List(Element(msg)) {
               "Git",
               "git",
             ),
-            icon_skills_item(
-              "/priv/assets/react.svg",
-              "React",
-              "golang",
-            ),
+            icon_skills_item("/priv/assets/react.svg", "React", "golang"),
             icon_skills_item("/priv/assets/psql.png", "SQL", "sql"),
             icon_skills_item(
               "https://nodejs.org/static/logos/jsIconWhite.svg",
@@ -224,31 +215,31 @@ pub fn view_projects() -> List(Element(msg)) {
 pub fn view_contact() -> List(Element(msg)) {
   [
     html.div([attribute.class("contact-page")], [
-     html.div([attribute.class("contact-content")], [
-      html.h2([attribute.class("socials-header")], [html.text("My socials")]),
-      html.div([attribute.class("contact-cards")], [
-        contact_card(
-          "mailto:umang+portfolio@umangsurana.com",
-          "Email",
-          "priv/assets/gmail.png",
-        ),
-        contact_card(
-          "https://github.com/unsecretised/",
-          "Github",
-          "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
-        ),
-        contact_card(
-          "https://users.rust-lang.org/u/unsecretised/",
-          "Rust lang forum",
-          "https://github.com/rust-lang/rust-artwork/blob/master/logo/rusty/rust-logo-512x512.png?raw=true",
-        ),
-        contact_card(
-          "https://stackoverflow.com/users/23020882/unsecretised",
-          "Stack overflow",
-          "https://stackoverflow.com/Content/Sites/stackoverflow/Img/favicon.ico",
-        )
+      html.div([attribute.class("contact-content")], [
+        html.h2([attribute.class("socials-header")], [html.text("My socials")]),
+        html.div([attribute.class("contact-cards")], [
+          contact_card(
+            "mailto:umang+portfolio@umangsurana.com",
+            "Email",
+            "priv/assets/gmail.png",
+          ),
+          contact_card(
+            "https://github.com/unsecretised/",
+            "Github",
+            "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+          ),
+          contact_card(
+            "https://users.rust-lang.org/u/unsecretised/",
+            "Rust lang forum",
+            "https://github.com/rust-lang/rust-artwork/blob/master/logo/rusty/rust-logo-512x512.png?raw=true",
+          ),
+          contact_card(
+            "https://stackoverflow.com/users/23020882/unsecretised",
+            "Stack overflow",
+            "https://stackoverflow.com/Content/Sites/stackoverflow/Img/favicon.ico",
+          ),
+        ]),
       ]),
-    ])
     ]),
   ]
 }
