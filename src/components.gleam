@@ -73,10 +73,7 @@ fn skills_item(href: String, title: String, desc: String) -> Element(msg) {
         html.text(title),
       ],
     ),
-    html.text(
-      desc,
-      // "An AI API Aggregator that aggregates and simplifies the APIs of various LLMs",
-    ),
+    html.text(desc),
   ])
 }
 
@@ -176,6 +173,11 @@ pub fn view_index() -> List(Element(msg)) {
               "https://gleam.run/images/lucy/lucy.svg",
               "Gleam",
               "gleam",
+            ),
+            icon_skills_item(
+              "https://neovim.io/favicon.ico",
+              "Neovim",
+              "golang",
             ),
           ]),
         ]),
