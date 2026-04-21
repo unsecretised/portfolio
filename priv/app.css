@@ -9,6 +9,10 @@
   src: url("/priv/assets/nugo-sans-font/NugoSansLight-9YzoK.ttf");
 }
 
+body {
+  line-height: 20px;
+}
+
 * {
   color: var(--color-foreground);
   font-family: "Nugo Sans";
@@ -147,6 +151,10 @@ nav a {
   margin: 10px;
 }
 
+.home-title {
+  margin-bottom: 15px;
+}
+
 .socials * {
   margin: 0 5px;
 }
@@ -239,8 +247,21 @@ nav a {
   background-color: #ffaff3;
 }
 
+#shadcn {
+  background-color: oklch(0.075 0 0);
+  color: whitesmoke;
+}
+
 #javascript {
   background-color: #f7df1e;
+}
+
+#typescript {
+  background-color: #3179C5;
+}
+
+#git {
+  background-color: #d7834f;
 }
 
 #python {
@@ -327,12 +348,10 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 20px;
-  background-color: var(--color-background);
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--color-foreground);
-  border-radius: 20px;
+  background-color: transparent;
+  border-width: 0px;
 }
 
 .contact-cards {
@@ -343,7 +362,7 @@ ul {
 
 .contact-page h2 {
   margin-top: 20px;
-  padding-left: 1rem;
+  text-align: center;
 }
 
 .contact-link {

@@ -3,8 +3,29 @@ import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
 
-const intro = "Hi! I'm Umang Surana, a software developer specialising in desktop web apps!
+fn intro() -> Element(msg) {
+  let intro =
+    "Hi! I'm Umang Surana, a software developer specialising in desktop web apps!
 I'm currently studying Applied AI and Analytics at Nanyang Polytechnic, Singapore."
+  html.p([], [
+    html.text(intro),
+  ])
+}
+
+fn social_icon(link: String, icon: String) -> Element(msg) {
+  html.a(
+    [
+      attribute.href(link),
+      attribute.target("_blank"),
+    ],
+    [
+      html.img([
+        attribute.src(icon),
+        attribute.class("pfp"),
+      ]),
+    ],
+  )
+}
 
 pub fn nav() {
   html.div([], [
@@ -41,6 +62,34 @@ fn link(href: String, text: String) -> Element(msg) {
   ])
 }
 
+fn skills_item(href: String, title: String, desc: String) -> Element(msg) {
+  html.li([attribute.class("skills-item skills-list-exp")], [
+    html.a(
+      [
+        attribute.href(href),
+        attribute.target("_blank"),
+      ],
+      [
+        html.text(title),
+      ],
+    ),
+    html.text(
+      desc,
+      // "An AI API Aggregator that aggregates and simplifies the APIs of various LLMs",
+    ),
+  ])
+}
+
+fn icon_skills_item(image_src: String, text: String, id: String) -> Element(msg) {
+  html.li([attribute.class("skills-item"), attribute.id(id)], [
+    html.img([
+      attribute.src(image_src),
+      attribute.class("skills-icon"),
+    ]),
+    html.text(text),
+  ])
+}
+
 // VIEW PAGES ------------------------------------------------------------------
 
 pub fn view_index() -> List(Element(msg)) {
@@ -55,131 +104,87 @@ pub fn view_index() -> List(Element(msg)) {
           html.text("Umang Surana"),
         ]),
         html.p([attribute.class("home-description")], [
-          html.text("Backend and desktop"),
-          html.br([]),
-          html.text("software developer"),
+          html.text("Software developer & Entrepreneur"),
         ]),
         html.div([attribute.class("socials")], [
-          html.a(
-            [
-              attribute.href("https://github.com/unsecretised/"),
-              attribute.target("_blank"),
-            ],
-            [
-              html.img([
-                attribute.src(
-                  "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
-                ),
-                attribute.class("pfp"),
-              ]),
-            ],
+          social_icon(
+            "https://github.com/unsecretised",
+            "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
           ),
-          html.a(
-            [
-              attribute.href("mailto:umang+portfolio@umangsurana.com"),
-              attribute.target("_blank"),
-            ],
-            [
-              html.img([
-                attribute.src("/priv/assets/gmail.png"),
-                attribute.class("pfp"),
-                attribute.id("email-icon"),
-              ]),
-            ],
+          social_icon(
+            "mailto:umang+pf@umangsurana.com",
+            "/priv/assets/gmail.png",
           ),
+          social_icon("https://users.rust-lang.org/u/unsecretised/", "https://github.com/rust-lang/rust-artwork/blob/master/logo/rusty/rust-logo-512x512.png?raw=true"),
         ]),
       ]),
     ]),
     html.div([attribute.class("detailed-description")], [
-      html.p([], [
-        html.text(intro),
-      ]),
+      intro(),
       html.div([attribute.id("my-strengths")], [
         html.div([attribute.class("skills-div")], [
           html.h2([attribute.class("skills-title")], [html.text("My Skills")]),
           html.ul([attribute.class("skills-list")], [
-            html.li([attribute.class("skills-item"), attribute.id("rust")], [
-              html.img([
-                attribute.src(
-                  "https://rustacean.net/assets/rustacean-orig-noshadow.svg",
-                ),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("Rust"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("gleam")], [
-              html.img([
-                attribute.src("https://gleam.run/images/lucy/lucy.svg"),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("Gleam"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("python")], [
-              html.img([
-                attribute.src(
-                  "https://www.python.org/static/img/python-logo-large.c36dccadd999.png?1646853871",
-                ),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("Python"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("sql")], [
-              html.img([
-                attribute.src("/priv/assets/psql.png"),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("SQL"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("html")], [
-              html.img([
-                attribute.src(
-                  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
-                ),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("HTML"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("css")], [
-              html.img([
-                attribute.src(
-                  "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-                ),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("CSS"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("deno")], [
-              html.img([
-                attribute.src("/priv/assets/deno.png"),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("Deno"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("nodejs")], [
-              html.img([
-                attribute.src("https://nodejs.org/static/logos/jsIconWhite.svg"),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("NodeJS"),
-            ]),
-            html.li([attribute.class("skills-item"), attribute.id("golang")], [
-              html.img([
-                attribute.src("https://go.dev/images/go-logo-white.svg"),
-                attribute.class("skills-icon"),
-              ]),
-              html.text("Go"),
-            ]),
-            html.li(
-              [attribute.class("skills-item"), attribute.id("javascript")],
-              [
-                html.img([
-                  attribute.src(
-                    "https://www.svgrepo.com/show/303206/javascript-logo.svg",
-                  ),
-                  attribute.class("skills-icon"),
-                ]),
-                html.text("JavaScript"),
-              ],
+            icon_skills_item(
+              "https://rustacean.net/assets/rustacean-orig-noshadow.svg",
+              "Rust",
+              "rust",
+            ),
+            icon_skills_item(
+              "/priv/assets/docker.svg",
+              "Docker",
+              "sql",
+            ),
+            icon_skills_item(
+              "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+              "",
+              "javascript",
+            ),
+            icon_skills_item(
+              "https://logospng.org/download/typescript/typescript-512.png",
+              "",
+              "typescript",
+            ),
+            icon_skills_item(
+              "https://go.dev/images/go-logo-white.svg",
+              "",
+              "golang",
+            ),
+            icon_skills_item(
+              "/priv/assets/aws.svg",
+              "",
+              "rust",
+            ),
+            icon_skills_item(
+              "https://ui.shadcn.com/favicon.ico",
+              "ShadCN",
+              "shadcn",
+            ),
+            icon_skills_item(
+              "https://git-scm.com/images/logos/downloads/Git-Icon-Black.svg",
+              "Git",
+              "git",
+            ),
+            icon_skills_item(
+              "/priv/assets/react.svg",
+              "React",
+              "golang",
+            ),
+            icon_skills_item("/priv/assets/psql.png", "SQL", "sql"),
+            icon_skills_item(
+              "https://nodejs.org/static/logos/jsIconWhite.svg",
+              "Node",
+              "nodejs",
+            ),
+            icon_skills_item(
+              "https://www.python.org/static/img/python-logo-large.c36dccadd999.png?1646853871",
+              "Python",
+              "python",
+            ),
+            icon_skills_item(
+              "https://gleam.run/images/lucy/lucy.svg",
+              "Gleam",
+              "gleam",
             ),
           ]),
         ]),
@@ -188,53 +193,21 @@ pub fn view_index() -> List(Element(msg)) {
             html.text("My Best Projects"),
           ]),
           html.ul([attribute.class("skills-list skills-list-exp")], [
-            html.li([attribute.class("skills-item skills-list-exp")], [
-              html.a(
-                [
-                  attribute.href("https://onellm.dev"),
-                  attribute.target("_blank"),
-                ],
-                [
-                  html.text("OneLLM"),
-                ],
-              ),
-              html.text(
-                "An AI API Aggregator that aggregates and simplifies the APIs of various LLMs",
-              ),
-            ]),
-
-            html.li([attribute.class("skills-item skills-list-exp")], [
-              html.a(
-                [
-                  attribute.href("https://rustcast.app"),
-                  attribute.target("_blank"),
-                ],
-                [
-                  html.text("RustCast"),
-                ],
-              ),
-
-              html.text(
-                "A Open Source alternative to a paid and closed source MacOS Productivity App",
-              ),
-            ]),
-            html.li([attribute.class("skills-item skills-list-exp")], [
-              html.a(
-                [
-                  attribute.href(
-                    "https://github.com/unsecretised/lion?tab=readme-ov-file#lion",
-                  ),
-                  attribute.target("_blank"),
-                ],
-                [
-                  html.text("Lion"),
-                ],
-              ),
-
-              html.text(
-                "A CLI tool for unifying the commands for various package managers",
-              ),
-            ]),
+            skills_item(
+              "https://onellm.dev",
+              "OneLLM",
+              "An AI API Aggregator that aggregates and simplifies the APIs of various LLMs",
+            ),
+            skills_item(
+              "https://rustcast.app",
+              "RustCast",
+              "A blazing fast, 100% free MacOS App Launcher and simple to use",
+            ),
+            skills_item(
+              "https://akitavault.com/",
+              "Akitavault",
+              "The modern version of digital learning in classrooms",
+            ),
           ]),
         ]),
       ]),
@@ -251,19 +224,31 @@ pub fn view_projects() -> List(Element(msg)) {
 pub fn view_contact() -> List(Element(msg)) {
   [
     html.div([attribute.class("contact-page")], [
-      html.h2([], [html.text("Contact me at:")]),
+     html.div([attribute.class("contact-content")], [
+      html.h2([attribute.class("socials-header")], [html.text("My socials")]),
       html.div([attribute.class("contact-cards")], [
         contact_card(
           "mailto:umang+portfolio@umangsurana.com",
-          "umang@umangsurana.com",
+          "Email",
           "priv/assets/gmail.png",
         ),
         contact_card(
           "https://github.com/unsecretised/",
-          "@unsecretised",
+          "Github",
           "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
         ),
+        contact_card(
+          "https://users.rust-lang.org/u/unsecretised/",
+          "Rust lang forum",
+          "https://github.com/rust-lang/rust-artwork/blob/master/logo/rusty/rust-logo-512x512.png?raw=true",
+        ),
+        contact_card(
+          "https://stackoverflow.com/users/23020882/unsecretised",
+          "Stack overflow",
+          "https://stackoverflow.com/Content/Sites/stackoverflow/Img/favicon.ico",
+        )
       ]),
+    ])
     ]),
   ]
 }
@@ -276,7 +261,7 @@ pub fn contact_card(href: String, text: String, icon: String) -> Element(msg) {
       attribute.class("contact-link"),
     ],
     [
-      html.img([attribute.src(icon), attribute.class("pfp")]),
+      social_icon(href, icon),
       html.text(text),
     ],
   )
@@ -324,7 +309,7 @@ fn project_card(project: Project) -> Element(msg) {
 const projects = [
   Project(
     title: "RustCast",
-    description: "Built from scratch an open source, blazing fast app, reaching 400+ stars, 1.1k+ downloads, and bringing in multiple sponsors",
+    description: "Built from scratch an open source, blazing fast app, reaching 550+ stars, 1.9k+ downloads, and multiple sponsors",
     image: "priv/assets/rustcast-poster.png",
     link: "https://rustcast.app",
   ),
