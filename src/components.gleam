@@ -187,19 +187,24 @@ pub fn view_index() -> List(Element(msg)) {
           ]),
           html.ul([attribute.class("skills-list skills-list-exp")], [
             skills_item(
-              "https://onellm.dev",
-              "OneLLM",
-              "An AI API Aggregator that aggregates and simplifies the APIs of various LLMs",
-            ),
-            skills_item(
               "https://rustcast.app",
               "RustCast",
               "A blazing fast, 100% free MacOS App Launcher and simple to use",
             ),
             skills_item(
+              "https://sxitch.app/",
+              "Sxitch",
+              "A Side project that I built and monetised to improve my desktop workflow",
+            ),
+            skills_item(
               "https://akitavault.com/",
               "Akitavault",
               "The modern version of digital learning in classrooms",
+            ),
+            skills_item(
+              "https://onellm.dev",
+              "OneLLM",
+              "An AI API Aggregator that aggregates and simplifies the APIs of various LLMs",
             ),
           ]),
         ]),
@@ -301,10 +306,22 @@ fn project_card(project: Project) -> Element(msg) {
 
 const projects = [
   Project(
+    title: "Sxitch",
+    description: "Singlehandedly built and monetised a MacOS Productivity app, with 4 downloads in the first half week",
+    image: "/priv/assets/sxitch_banner.png",
+    link: "https://sxitch.app",
+  ),
+  Project(
     title: "RustCast",
-    description: "Built from scratch an open source, blazing fast app, reaching 550+ stars, 1.9k+ downloads, and multiple sponsors",
+    description: "Built from scratch an open source, blazing fast app, reaching 700+ stars, 2.7k+ downloads, and multiple sponsors",
     image: "priv/assets/rustcast-poster.png",
     link: "https://rustcast.app",
+  ),
+  Project(
+    title: "Akitavault",
+    description: "Built from scratch a modernised DMA for schools, that used a proprietary mental health AI model to analyse students mental health",
+    image: "/priv/assets/akitavault.png",
+    link: "https://akitavault.com/",
   ),
   Project(
     title: "OneLLM",
